@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cae420c3-c615-4b35-a745-3926a8ef6f97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -170,6 +171,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="METHOD_NAME" value="should_calculate_the_cost_for_unpavement_road" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TransportCostCalculatorTest.should_return_zero_for_no_data_provided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
@@ -189,6 +206,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TransportCostCalculatorTest" />
+        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_pavement_road" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_paviment_road" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_return_zero_for_no_data_provided" />
@@ -208,7 +226,7 @@
       <workItem from="1560003286571" duration="1240000" />
       <workItem from="1560006606421" duration="36000" />
       <workItem from="1560006647977" duration="736000" />
-      <workItem from="1560007923258" duration="849000" />
+      <workItem from="1560007923258" duration="1346000" />
     </task>
     <servers />
   </component>
@@ -231,9 +249,12 @@
     <history-entry file="TransportCostCalculatorTest - 2019.06.08 at 12h 42m 00s.xml">
       <configuration name="TransportCostCalculatorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_for_unpavement_road - 2019.06.08 at 12h 53m 13s.xml">
+      <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2861000" />
+    <option name="totallyTimeSpent" value="3358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="1295" height="695" extended-state="6" />
@@ -323,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -333,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
