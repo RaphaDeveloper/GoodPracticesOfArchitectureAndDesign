@@ -9,13 +9,13 @@ public class TransportCostCalculator {
     private final double LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST = 5;
 
     public double calculate(TransportData transportData) {
-        double cost = calculateRoadCost(transportData);
+        double transportCost = calculateRoadCost(transportData);
 
         if (weightIsInExcess(transportData.getWeightTon())) {
-            cost += calculateCostOfExcessWeight(transportData);
+            transportCost += calculateCostOfExcessWeight(transportData);
         }
 
-        return cost;
+        return applyVehicleMultiplyingFactorOnTransportCost(transportData.getVehicleId(), transportCost);
     }
 
     private double calculateRoadCost(TransportData transportData) {
@@ -40,5 +40,15 @@ public class TransportCostCalculator {
 
     private double getExcessWeight(int weight) {
         return weight - LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
+    }
+
+    private double applyVehicleMultiplyingFactorOnTransportCost(int vehicleId, double transportCost) {
+        double multiplyingFactor = 1d;
+
+        if (vehicleId == 2) {
+            multiplyingFactor = 1.05d;
+        }
+
+        return transportCost * multiplyingFactor;
     }
 }

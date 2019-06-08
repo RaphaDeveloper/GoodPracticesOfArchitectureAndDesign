@@ -55,8 +55,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five()
-    {
+    public void should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five() {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInUnpavementRoad(100);
@@ -68,8 +67,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five()
-    {
+    public void should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five() {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInUnpavementRoad(100);
@@ -78,5 +76,37 @@ public class TransportCostCalculatorTest {
         double transportCost = new TransportCostCalculator().calculate(transportData);
 
         assertThat(transportCost, is(68d));
+    }
+
+    @Test
+    public void should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck() {
+        int boxTruckId = 1;
+        double multiplyingFactor = 1.00;
+        double transportCostExpected = 116d * multiplyingFactor;
+
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(boxTruckId);
+        transportData.setDistanceInPavementRoad(100);
+        transportData.setDistanceInUnpavementRoad(100);
+
+        double transportCost = new TransportCostCalculator().calculate(transportData);
+
+        assertThat(transportCost, is(transportCostExpected));
+    }
+
+    @Test
+    public void should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck() {
+        int bucketTruckId = 2;
+        double multiplyingFactor = 1.05d;
+        double transportCostExpected = 116d * multiplyingFactor;
+
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(bucketTruckId);
+        transportData.setDistanceInPavementRoad(100);
+        transportData.setDistanceInUnpavementRoad(100);
+
+        double transportCost = new TransportCostCalculator().calculate(transportData);
+
+        assertThat(transportCost, is(transportCostExpected));
     }
 }
