@@ -138,20 +138,4 @@ public class TransportCostCalculatorTest {
 
         assertThat(transportCost, is(transportCostExpected));
     }
-
-    @Test
-    public void should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2() {
-        int bigTruckVehicle = 3;
-        double multiplyingFactor = 1.12d;
-        double transportCostExpected = 116d * multiplyingFactor;
-
-        TransportData transportData = new TransportData();
-        transportData.setVehicleId(bigTruckVehicle);
-        transportData.setDistanceInPavementRoad(100);
-        transportData.setDistanceInUnpavementRoad(100);
-
-        double transportCost = transportCostCalculator.calculate(transportData);
-
-        assertThat(transportCost, is(transportCostExpected));
-    }
 }
