@@ -17,6 +17,8 @@ public class TransportCostCalculator {
     }
 
     public double calculate(TransportData transportData) {
+        transportData.validateData();
+
         double transportCost = calculateRoadCost(transportData);
 
         if (weightIsInExcess(transportData.getWeightTon())) {

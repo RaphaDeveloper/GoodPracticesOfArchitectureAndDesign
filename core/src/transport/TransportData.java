@@ -1,5 +1,7 @@
 package transport;
 
+import transport.exceptions.InvalidDistanceException;
+
 public class TransportData {
     private int distanceInPavementRoad;
     private int distanceInUnpavementRoad;
@@ -40,5 +42,11 @@ public class TransportData {
 
     public void setWeightTon(int weightTon) {
         this.weightTon = weightTon;
+    }
+
+    public void validateData() {
+        if (getDistanceInPavementRoad() < 0) {
+            throw  new InvalidDistanceException("The distance of paved road cannot be negative.");
+        }
     }
 }

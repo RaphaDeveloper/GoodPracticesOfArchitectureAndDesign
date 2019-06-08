@@ -4,6 +4,7 @@ import facades.DependencyInjectionFacade;
 import org.junit.Before;
 import org.junit.Test;
 import transport.TransportData;
+import transport.exceptions.InvalidDistanceException;
 import transport.vehicle.VehicleRepository;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -137,5 +138,14 @@ public class TransportCostCalculatorTest {
         double transportCost = transportCostCalculator.calculate(transportData);
 
         assertThat(transportCost, is(transportCostExpected));
+    }
+
+    @Test(expected = InvalidDistanceException.class)
+    public void should_not_be_possible_to_calculate_transport_cost_with_negative_distance_in_paved_road() {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(1);
+        transportData.setDistanceInPavementRoad(-100);
+
+        transportCostCalculator.calculate(transportData);
     }
 }
