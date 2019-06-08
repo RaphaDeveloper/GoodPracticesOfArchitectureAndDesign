@@ -55,7 +55,13 @@ public class TransportCostCalculator {
     }
 
     private Vehicle getVehicleById(int vehicleId) {
-        return vehicleRepository.getById(vehicleId);
+        Vehicle vehicle = vehicleRepository.getById(vehicleId);
+
+        if (vehicle == null) {
+            throw new VehicleNotFoundException(vehicleId);
+        }
+
+        return vehicle;
     }
 
     private double applyVehicleMultiplyingFactorOnTransportCost(Vehicle vehicle, double transportCost) {

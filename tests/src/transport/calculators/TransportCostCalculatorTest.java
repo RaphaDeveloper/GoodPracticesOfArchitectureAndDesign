@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import transport.TransportData;
 import transport.exceptions.InvalidDistanceException;
+import transport.vehicle.VehicleNotFoundException;
 import transport.vehicle.VehicleRepository;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -154,6 +155,15 @@ public class TransportCostCalculatorTest {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInUnpavementRoad(-100);
+
+        transportCostCalculator.calculate(transportData);
+    }
+
+    @Test(expected = VehicleNotFoundException.class)
+    public void should_not_be_possible_to_calculate_transport_cost_if_there_is_no_vehicle_with_the_provided_id() {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(4);
+        transportData.setDistanceInUnpavementRoad(100);
 
         transportCostCalculator.calculate(transportData);
     }
