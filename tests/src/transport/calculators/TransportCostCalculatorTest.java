@@ -148,4 +148,13 @@ public class TransportCostCalculatorTest {
 
         transportCostCalculator.calculate(transportData);
     }
+
+    @Test(expected = InvalidDistanceException.class)
+    public void should_not_be_possible_to_calculate_transport_cost_with_negative_distance_in_unpaved_road() {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(1);
+        transportData.setDistanceInUnpavementRoad(-100);
+
+        transportCostCalculator.calculate(transportData);
+    }
 }

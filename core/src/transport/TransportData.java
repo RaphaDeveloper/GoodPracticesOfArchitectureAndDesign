@@ -48,5 +48,9 @@ public class TransportData {
         if (getDistanceInPavementRoad() < 0) {
             throw  new InvalidDistanceException("The distance of paved road cannot be negative.");
         }
+
+        if (getDistanceInUnpavementRoad() < 0) {
+            throw  new InvalidDistanceException("The distance of unpaved road cannot be negative.");
+        }
     }
 }
