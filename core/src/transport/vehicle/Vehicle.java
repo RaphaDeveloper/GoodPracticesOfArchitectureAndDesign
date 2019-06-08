@@ -1,4 +1,4 @@
-package transportCost.entities;
+package transport.vehicle;
 
 public class Vehicle {
     private int id;

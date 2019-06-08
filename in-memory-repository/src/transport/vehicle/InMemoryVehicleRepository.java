@@ -1,13 +1,9 @@
-package transportCost;
-
-import transportCost.entities.Vehicle;
-import transportCost.repositories.VehicleRepository;
+package transport.vehicle;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class InMemoryVehicleRepository implements VehicleRepository {
-
     private Map<Integer, Vehicle> vehicleById = new HashMap<>();
 
     public InMemoryVehicleRepository() {
@@ -28,5 +24,4 @@ public class InMemoryVehicleRepository implements VehicleRepository {
     public Vehicle getById(int id) {
         return vehicleById.get(id);
     }
-
 }

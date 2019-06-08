@@ -1,8 +1,7 @@
-package transportCost.services;
+package transport.calculators;
 
-import transportCost.entities.Vehicle;
-import transportCost.repositories.VehicleRepository;
-import transportCost.valueObjects.TransportData;
+import transport.*;
+import transport.vehicle.*;
 
 public class TransportCostCalculator {
     private final double PAVED_ROAD_COST_BY_KILOMETER = 0.54;

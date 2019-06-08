@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repositories/repositories.iml" filepath="$PROJECT_DIR$/repositories/repositories.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/domain.core.iml" filepath="$PROJECT_DIR$/core/domain.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tests/domain.tests.iml" filepath="$PROJECT_DIR$/tests/domain.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/in-memory-repository/in-memory-repository.iml" filepath="$PROJECT_DIR$/in-memory-repository/in-memory-repository.iml" />
     </modules>
   </component>
 </project>

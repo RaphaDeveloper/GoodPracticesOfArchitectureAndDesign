@@ -1,4 +1,4 @@
-package transportCost.valueObjects;
+package transport;
 
 public class TransportData {
     private int distanceInPavementRoad;
