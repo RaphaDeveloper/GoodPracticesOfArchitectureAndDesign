@@ -20,10 +20,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="211">
+              <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#should_return_zero_for_no_data_provided#0;class#TransportCostCalculatorTest#0" />
+                <element signature="method#should_calculate_the_cost_for_paviment_road#0;class#TransportCostCalculatorTest#0" />
               </folding>
             </state>
           </provider>
@@ -32,8 +34,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="228">
+              <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/src/valueObjects/TransportData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+              <folding>
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,22 +170,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_paviment_road" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
-      <option name="METHOD_NAME" value="should_calculate_the_cost_for_paviment_road" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
@@ -187,7 +186,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransportCostCalculatorTest.should_return_zero_for_no_data_provided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
@@ -197,7 +196,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="services" />
       <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
-      <option name="METHOD_NAME" value="should_return_zero_for_no_data_provided" />
+      <option name="METHOD_NAME" value="should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="METHOD_NAME" value="should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -206,10 +221,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TransportCostCalculatorTest" />
+        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five" />
+        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_pavement_road" />
-        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_for_paviment_road" />
-        <item itemvalue="JUnit.TransportCostCalculatorTest.should_return_zero_for_no_data_provided" />
       </list>
     </recent_temporary>
   </component>
@@ -226,17 +241,11 @@
       <workItem from="1560003286571" duration="1240000" />
       <workItem from="1560006606421" duration="36000" />
       <workItem from="1560006647977" duration="736000" />
-      <workItem from="1560007923258" duration="1346000" />
+      <workItem from="1560007923258" duration="2686000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TransportCostCalculatorTest_should_return_zero_for_no_data_provided - 2019.06.08 at 11h 22m 58s.xml">
-      <configuration name="TransportCostCalculatorTest.should_return_zero_for_no_data_provided" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_for_paviment_road - 2019.06.08 at 12h 39m 29s.xml">
-      <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_paviment_road" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_for_pavement_road - 2019.06.08 at 12h 40m 10s.xml">
       <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_pavement_road" configurationId="JUnit" />
     </history-entry>
@@ -252,15 +261,30 @@
     <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_for_unpavement_road - 2019.06.08 at 12h 53m 13s.xml">
       <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_for_unpavement_road - 2019.06.08 at 12h 55m 28s.xml">
+      <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_for_unpavement_road" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest - 2019.06.08 at 12h 55m 41s.xml">
+      <configuration name="TransportCostCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest - 2019.06.08 at 12h 58m 13s.xml">
+      <configuration name="TransportCostCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five - 2019.06.08 at 13h 06m 33s.xml">
+      <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_without_additional_cost_when_the_weight_ton_is_less_than_or_equal_to_five" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest_should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five - 2019.06.08 at 13h 08m 08s.xml">
+      <configuration name="TransportCostCalculatorTest.should_calculate_the_cost_with_additional_cost_when_the_weight_ton_is_greater_than_five" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3358000" />
+    <option name="totallyTimeSpent" value="4698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26153848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -302,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/valueObjects/TransportData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../prova técnica/TransportData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -344,18 +361,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="211">
+          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#should_return_zero_for_no_data_provided#0;class#TransportCostCalculatorTest#0" />
+            <element signature="method#should_calculate_the_cost_for_paviment_road#0;class#TransportCostCalculatorTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/valueObjects/TransportData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="228">
+          <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
         </state>
       </provider>
     </entry>
