@@ -47,6 +47,8 @@ public class TransportCostCalculator {
 
         if (vehicleId == 2) {
             multiplyingFactor = 1.05d;
+        } else if (vehicleId == 3) {
+            multiplyingFactor = 1.12d;
         }
 
         return transportCost * multiplyingFactor;
