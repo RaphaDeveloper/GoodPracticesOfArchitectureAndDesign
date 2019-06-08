@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae420c3-c615-4b35-a745-3926a8ef6f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_library_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/domain.core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in-memory-repository/in-memory-repository.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/domain.tests.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_inject_guice_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-guice-dependency-injection/google-guice-dependency-injection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-guice-dependency-injection/src/module/ConcreteModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/domain.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/transportCost/entities/Vehicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/transportCost/repositories/VehicleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/transportCost/services/TransportCostCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/transportCost/valueObjects/TransportData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/test/transportCost/services/TransportCostCalculatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/repositories.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/src/transportCost/InMemoryVehicleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain.tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/domain.tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,10 +25,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/in-memory-repository/src/transport/vehicle/InMemoryVehicleRepository.java">
+        <entry file="file://$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="238">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,10 +75,13 @@
         <option value="$PROJECT_DIR$/core/src/transport/vehicle/Vehicle.java" />
         <option value="$PROJECT_DIR$/core/src/transport/vehicle/VehicleRepository.java" />
         <option value="$PROJECT_DIR$/core/src/transport/TransportData.java" />
-        <option value="$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java" />
         <option value="$PROJECT_DIR$/tests/src/transportCost/services/TransportCostCalculatorTest.java" />
-        <option value="$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java" />
         <option value="$PROJECT_DIR$/in-memory-repository/src/transport/vehicle/InMemoryVehicleRepository.java" />
+        <option value="$PROJECT_DIR$/google-guice-dependency-injection/src/facades/DependencyInjectionFacade.java" />
+        <option value="$PROJECT_DIR$/google-guice-dependency-injection/src/module/MyModule.java" />
+        <option value="$PROJECT_DIR$/google-guice-dependency-injection/src/module/ConcreteModule.java" />
+        <option value="$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java" />
+        <option value="$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java" />
       </list>
     </option>
   </component>
@@ -89,7 +99,48 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="transport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="domain" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="transport" type="462c0819:PsiDirectoryNode" />
+              <item name="calculators" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -191,17 +242,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
+    <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain.tests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="transportCost.services.*" />
+          <option name="PATTERN" value="transport.calculators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="transportCost.services" />
-      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
-      <option name="METHOD_NAME" value="should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" />
+      <option name="PACKAGE_NAME" value="transport.calculators" />
+      <option name="MAIN_CLASS_NAME" value="transport.calculators.TransportCostCalculatorTest" />
+      <option name="METHOD_NAME" value="should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -257,10 +308,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TransportCostCalculatorTest (2)" />
+        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2" />
         <item itemvalue="JUnit.TransportCostCalculatorTest (1)" />
         <item itemvalue="JUnit.TransportCostCalculatorTest" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck" />
-        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" />
       </list>
     </recent_temporary>
   </component>
@@ -282,15 +333,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TransportCostCalculatorTest_should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck - 2019.06.08 at 15h 20m 18s.xml">
-      <configuration name="TransportCostCalculatorTest.should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TransportCostCalculatorTest_should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck - 2019.06.08 at 15h 20m 31s.xml">
-      <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TransportCostCalculatorTest_should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck - 2019.06.08 at 15h 20m 49s.xml">
-      <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TransportCostCalculatorTest_should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck - 2019.06.08 at 15h 27m 54s.xml">
       <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" configurationId="JUnit" />
     </history-entry>
@@ -312,12 +354,22 @@
     <history-entry file="TransportCostCalculatorTest_(2) - 2019.06.08 at 17h 29m 53s.xml">
       <configuration name="TransportCostCalculatorTest (2)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TransportCostCalculatorTest_should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2 - 2019.06.08 at 18h 08m 03s.xml">
+      <configuration name="TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest_(2) - 2019.06.08 at 18h 13m 57s.xml">
+      <configuration name="TransportCostCalculatorTest (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransportCostCalculatorTest_(2) - 2019.06.08 at 18h 14m 20s.xml">
+      <configuration name="TransportCostCalculatorTest (2)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16207000" />
+    <option name="totallyTimeSpent" value="18047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.26510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -481,26 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/transport/vehicle/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -524,8 +556,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/in-memory-repository/src/transport/vehicle/InMemoryVehicleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="85">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-guice-dependency-injection/src/module/ConcreteModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.2.2/guice-4.2.2.jar!/com/google/inject/AbstractModule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-guice-dependency-injection/src/facades/DependencyInjectionFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.2.2/guice-4.2.2.jar!/com/google/inject/Injector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Before.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/transport/calculators/TransportCostCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/transport/calculators/TransportCostCalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -582,11 +682,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>in-memory-repository</last-edited>
+          <last-edited>tests|domain</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -16,8 +16,6 @@ public class TransportCostCalculator {
         this.vehicleRepository = vehicleRepository;
     }
 
-    public TransportCostCalculator() {}
-
     public double calculate(TransportData transportData) {
         double transportCost = calculateRoadCost(transportData);
 

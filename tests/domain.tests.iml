@@ -19,5 +19,6 @@
     </orderEntry>
     <orderEntry type="library" name="org.hamcrest:hamcrest-library:2.1" level="project" />
     <orderEntry type="module" module-name="domain.core" scope="TEST" />
+    <orderEntry type="module" module-name="google-guice-dependency-injection" scope="TEST" />
   </component>
 </module>
