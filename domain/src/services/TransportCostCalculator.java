@@ -5,6 +5,8 @@ import valueObjects.TransportData;
 public class TransportCostCalculator {
 
     public double calculate(TransportData transportData) {
-        return transportData.getDistanceInPavementRoad() * 0.54;
+        final double pavementRoadCostByKilometer = 0.54;
+
+        return transportData.getDistanceInPavementRoad() * pavementRoadCostByKilometer;
     }
 }
