@@ -21,7 +21,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_the_cost_for_pavement_road() {
+    public void should_calculate_the_cost_for_paved_road() {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInPavementRoad(100);
@@ -32,7 +32,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_the_cost_for_unpavement_road() {
+    public void should_calculate_the_cost_for_unpaved_road() {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInUnpavementRoad(100);
@@ -40,6 +40,18 @@ public class TransportCostCalculatorTest {
         double transportCost = new TransportCostCalculator().calculate(transportData);
 
         assertThat(transportCost, is(62d));
+    }
+
+    @Test
+    public void should_calculate_the_cost_in_a_route_with_paved_and_unpaved_road() {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(1);
+        transportData.setDistanceInPavementRoad(100);
+        transportData.setDistanceInUnpavementRoad(100);
+
+        double transportCost = new TransportCostCalculator().calculate(transportData);
+
+        assertThat(transportCost, is(116d));
     }
 
     @Test
