@@ -53,17 +53,7 @@ public class TransportCostCalculator {
     }
 
     private Vehicle getVehicleById(int vehicleId) {
-        Vehicle vehicle = new Vehicle();
-        vehicle.setId(vehicleId);
-        vehicle.setMultiplyingFactor(1d);
-
-        if (vehicleId == 2) {
-            vehicle.setMultiplyingFactor(1.05d);
-        } else if (vehicleId == 3) {
-            vehicle.setMultiplyingFactor(1.12d);
-        }
-
-        return vehicle;
+        return vehicleRepository.getById(vehicleId);
     }
 
     private double applyVehicleMultiplyingFactorOnTransportCost(Vehicle vehicle, double transportCost) {
