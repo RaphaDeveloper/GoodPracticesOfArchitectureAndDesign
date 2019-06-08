@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cae420c3-c615-4b35-a745-3926a8ef6f97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="cae420c3-c615-4b35-a745-3926a8ef6f97" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,32 +14,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="121" column="49" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#should_return_zero_for_no_data_provided#0;class#TransportCostCalculatorTest#0" />
-                <element signature="method#should_calculate_the_cost_for_paviment_road#0;class#TransportCostCalculatorTest#0" />
-                <element signature="method#should_calculate_the_cost_for_unpavement_road#0;class#TransportCostCalculatorTest#0" />
-                <element signature="method#should_calculate_the_cost_without_additional_cost_when_the_weight_is_less_than_or_equal_to_five#0;class#TransportCostCalculatorTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
+        <entry file="file://$PROJECT_DIR$/domain/src/entities/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#1199#1200#0" expanded="true" />
-                <element signature="e#1243#1244#0" expanded="true" />
-                <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#86#87#0" expanded="true" />
+                <element signature="e#111#112#0" expanded="true" />
+                <element signature="e#144#145#0" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,13 +99,12 @@
             <path>
               <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TechnicalProof" type="b2602c69:ProjectViewProjectNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -150,17 +138,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck">
+  <component name="RunManager" selected="JUnit.TransportCostCalculatorTest">
     <configuration name="TransportCostCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="transportCost.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="PACKAGE_NAME" value="transportCost.services" />
+      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,12 +158,12 @@
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="transportCost.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="PACKAGE_NAME" value="transportCost.services" />
+      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
       <option name="METHOD_NAME" value="should_calculate_the_cost_in_a_route_with_paved_and_unpaved_road" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -186,12 +174,12 @@
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="transportCost.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="PACKAGE_NAME" value="transportCost.services" />
+      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
       <option name="METHOD_NAME" value="should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -202,12 +190,12 @@
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="transportCost.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="PACKAGE_NAME" value="transportCost.services" />
+      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
       <option name="METHOD_NAME" value="should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -218,12 +206,12 @@
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="transportCost.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.TransportCostCalculatorTest" />
+      <option name="PACKAGE_NAME" value="transportCost.services" />
+      <option name="MAIN_CLASS_NAME" value="transportCost.services.TransportCostCalculatorTest" />
       <option name="METHOD_NAME" value="should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -232,8 +220,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck" />
         <item itemvalue="JUnit.TransportCostCalculatorTest" />
+        <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck" />
         <item itemvalue="JUnit.TransportCostCalculatorTest.should_calculate_the_cost_in_a_route_with_paved_and_unpaved_road" />
@@ -290,11 +278,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11302000" />
+    <option name="totallyTimeSpent" value="11476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.26153848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -386,10 +373,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/test/services/TransportCostCalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/domain/test/transportCost/services/TransportCostCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="121" column="49" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="49" />
+        <state relative-caret-position="369">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#should_return_zero_for_no_data_provided#0;class#TransportCostCalculatorTest#0" />
@@ -400,7 +387,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/services/TransportCostCalculator.java">
+    <entry file="file://$PROJECT_DIR$/domain/src/transportCost/services/TransportCostCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
@@ -468,6 +455,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

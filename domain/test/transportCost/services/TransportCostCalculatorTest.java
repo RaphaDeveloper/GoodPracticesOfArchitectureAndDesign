@@ -1,9 +1,9 @@
-package services;
+package transportCost.services;
 
 import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import valueObjects.TransportData;
+import transportCost.valueObjects.TransportData;
 
 public class TransportCostCalculatorTest {
 
