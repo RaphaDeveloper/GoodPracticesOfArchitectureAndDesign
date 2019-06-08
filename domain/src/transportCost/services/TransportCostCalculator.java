@@ -1,5 +1,6 @@
 package transportCost.services;
 
+import transportCost.entities.Vehicle;
 import transportCost.valueObjects.TransportData;
 
 public class TransportCostCalculator {
@@ -15,7 +16,9 @@ public class TransportCostCalculator {
             transportCost += calculateCostOfExcessWeight(transportData);
         }
 
-        return applyVehicleMultiplyingFactorOnTransportCost(transportData.getVehicleId(), transportCost);
+        Vehicle vehicle = getVehicleById(transportData.getVehicleId());
+
+        return applyVehicleMultiplyingFactorOnTransportCost(vehicle, transportCost);
     }
 
     private double calculateRoadCost(TransportData transportData) {
@@ -42,15 +45,21 @@ public class TransportCostCalculator {
         return weight - LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
     }
 
-    private double applyVehicleMultiplyingFactorOnTransportCost(int vehicleId, double transportCost) {
-        double multiplyingFactor = 1d;
+    private Vehicle getVehicleById(int vehicleId) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setMultiplyingFactor(1d);
 
         if (vehicleId == 2) {
-            multiplyingFactor = 1.05d;
+            vehicle.setMultiplyingFactor(1.05d);
         } else if (vehicleId == 3) {
-            multiplyingFactor = 1.12d;
+            vehicle.setMultiplyingFactor(1.12d);
         }
 
-        return transportCost * multiplyingFactor;
+        return vehicle;
+    }
+
+    private double applyVehicleMultiplyingFactorOnTransportCost(Vehicle vehicle, double transportCost) {
+        return transportCost * vehicle.getMultiplyingFactor();
     }
 }
