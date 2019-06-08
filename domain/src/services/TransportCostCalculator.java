@@ -5,6 +5,6 @@ import valueObjects.TransportData;
 public class TransportCostCalculator {
 
     public double calculate(TransportData transportData) {
-        return 0d;
+        return transportData.getDistanceInPavementRoad() * 0.54;
     }
 }

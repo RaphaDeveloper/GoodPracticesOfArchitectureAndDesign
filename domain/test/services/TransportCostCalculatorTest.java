@@ -20,4 +20,16 @@ public class TransportCostCalculatorTest {
         assertThat(transportCost, is(0d));
     }
 
+    @Test
+    public void should_calculate_the_cost_for_pavement_road()
+    {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(1);
+        transportData.setDistanceInPavementRoad(100);
+
+        double transportCost = new TransportCostCalculator().calculate(transportData);
+
+        assertThat(transportCost, is(54d));
+    }
+
 }
