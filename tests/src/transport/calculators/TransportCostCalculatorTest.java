@@ -4,7 +4,7 @@ import facades.DependencyInjectionFacade;
 import org.junit.Before;
 import org.junit.Test;
 import transport.TransportData;
-import transport.exceptions.InvalidDistanceException;
+import transport.exceptions.*;
 import transport.vehicle.VehicleNotFoundException;
 import transport.vehicle.VehicleRepository;
 
@@ -155,6 +155,16 @@ public class TransportCostCalculatorTest {
         TransportData transportData = new TransportData();
         transportData.setVehicleId(1);
         transportData.setDistanceInUnpavementRoad(-100);
+
+        transportCostCalculator.calculate(transportData);
+    }
+
+    @Test(expected = InvalidWeightException.class)
+    public void should_not_be_possible_to_calculate_transport_cost_with_negative_weight() {
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(1);
+        transportData.setWeightTon(-5);
+        transportData.setDistanceInUnpavementRoad(100);
 
         transportCostCalculator.calculate(transportData);
     }
