@@ -3,24 +3,42 @@ package services;
 import valueObjects.TransportData;
 
 public class TransportCostCalculator {
+    private final double PAVED_ROAD_COST_BY_KILOMETER = 0.54;
+    private final double UNPAVED_ROAD_COST_BY_KILOMETER = 0.62;
+    private final double COST_OF_EXCESS_WEIGHT = 0.02;
+    private final double LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST = 5;
 
     public double calculate(TransportData transportData) {
-        double additionalCostOfExcessBurden = 0;
+        double cost = calculateRoadCost(transportData);
 
-        final double pavedRoadCostByKilometer = 0.54;
-        final double pavedRoadCost = transportData.getDistanceInPavementRoad() * pavedRoadCostByKilometer;
-
-        final double unpavedRoadCostByKilometer = 0.62;
-        final double unpavedRoadCost = transportData.getDistanceInUnpavementRoad() * unpavedRoadCostByKilometer;
-
-        if (transportData.getWeightTon() > 5) {
-            final int totalDistance = transportData.getDistanceInPavementRoad() + transportData.getDistanceInUnpavementRoad();
-            final double costOfExcessBurden = 0.02d;
-            final int excessWeight = transportData.getWeightTon() - 5;
-
-            additionalCostOfExcessBurden = costOfExcessBurden * excessWeight * totalDistance;
+        if (weightIsInExcess(transportData.getWeightTon())) {
+            cost += calculateCostOfExcessWeight(transportData);
         }
 
-        return pavedRoadCost + unpavedRoadCost + additionalCostOfExcessBurden;
+        return cost;
+    }
+
+    private double calculateRoadCost(TransportData transportData) {
+        return calculatePavedRoadCost(transportData) + calculateUnpavedRoadCost(transportData);
+    }
+
+    private double calculatePavedRoadCost(TransportData transportData) {
+        return transportData.getDistanceInPavementRoad() * PAVED_ROAD_COST_BY_KILOMETER;
+    }
+
+    private double calculateUnpavedRoadCost(TransportData transportData) {
+        return transportData.getDistanceInUnpavementRoad() * UNPAVED_ROAD_COST_BY_KILOMETER;
+    }
+
+    private boolean weightIsInExcess(int weight) {
+        return weight > LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
+    }
+
+    private double calculateCostOfExcessWeight(TransportData transportData) {
+        return COST_OF_EXCESS_WEIGHT * getExcessWeight(transportData.getWeightTon()) * transportData.getTotalDistance();
+    }
+
+    private double getExcessWeight(int weight) {
+        return weight - LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
     }
 }

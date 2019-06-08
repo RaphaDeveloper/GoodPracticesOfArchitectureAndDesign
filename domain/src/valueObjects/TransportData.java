@@ -1,11 +1,14 @@
 package valueObjects;
 
 public class TransportData {
-
     private int distanceInPavementRoad;
     private int distanceInUnpavementRoad;
     private int vehicleId;
     private int weightTon;
+
+    public int getTotalDistance() {
+        return getDistanceInPavementRoad() + getDistanceInUnpavementRoad();
+    }
 
     public int getDistanceInPavementRoad() {
         return distanceInPavementRoad;
@@ -38,5 +41,4 @@ public class TransportData {
     public void setWeightTon(int weightTon) {
         this.weightTon = weightTon;
     }
-
 }
