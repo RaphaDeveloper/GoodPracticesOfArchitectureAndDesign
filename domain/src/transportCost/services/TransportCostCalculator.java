@@ -1,6 +1,7 @@
 package transportCost.services;
 
 import transportCost.entities.Vehicle;
+import transportCost.repositories.VehicleRepository;
 import transportCost.valueObjects.TransportData;
 
 public class TransportCostCalculator {
@@ -8,6 +9,15 @@ public class TransportCostCalculator {
     private final double UNPAVED_ROAD_COST_BY_KILOMETER = 0.62;
     private final double COST_OF_EXCESS_WEIGHT = 0.02;
     private final double LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST = 5;
+
+    private VehicleRepository vehicleRepository;
+
+    public TransportCostCalculator(VehicleRepository vehicleRepository) {
+
+        this.vehicleRepository = vehicleRepository;
+    }
+
+    public TransportCostCalculator() {}
 
     public double calculate(TransportData transportData) {
         double transportCost = calculateRoadCost(transportData);

@@ -5,6 +5,14 @@ public class Vehicle {
     private String name;
     private double multiplyingFactor;
 
+    public Vehicle() {}
+
+    public Vehicle(int id, String name, double multiplyingFactor) {
+        this.id = id;
+        this.name = name;
+        this.multiplyingFactor = multiplyingFactor;
+    }
+
     public int getId() {
         return id;
     }
