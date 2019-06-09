@@ -4,6 +4,7 @@ import transport.TransportData;
 import transport.calculators.TransportCostCalculator;
 import utils.ConsoleUtils;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class AppService {
@@ -32,9 +33,9 @@ public class AppService {
         transportData.setVehicleId(vehicleId);
         transportData.setWeightTon(weight);
 
-        Double transportCost = transportCostCalculator.calculate(transportData);
+        double transportCost = transportCostCalculator.calculate(transportData);
 
-        System.out.println("The cost of the transport is: " + transportCost.toString());
+        System.out.println("The cost of the transport is " + NumberFormat.getCurrencyInstance().format(transportCost));
     }
 
     public void info() {

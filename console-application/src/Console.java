@@ -22,6 +22,8 @@ public class Console {
 
             if ("CALC".equalsIgnoreCase(cmd)) {
                 appService.calculateTransportCost(scanner);
+            } else if ("INFO".equalsIgnoreCase(cmd)) {
+                appService.info();
             } else if ("EXIT".equalsIgnoreCase(cmd)) {
                 break;
             } else {
