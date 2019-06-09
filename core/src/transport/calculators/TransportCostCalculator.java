@@ -21,13 +21,15 @@ public class TransportCostCalculator {
 
         double transportCost = calculateRoadCost(transportData);
 
+        Vehicle vehicle = getVehicleById(transportData.getVehicleId());
+
+        transportCost = applyVehicleMultiplyingFactorOnTransportCost(vehicle, transportCost);
+
         if (weightIsInExcess(transportData.getWeightTon())) {
             transportCost += calculateCostOfExcessWeight(transportData);
         }
 
-        Vehicle vehicle = getVehicleById(transportData.getVehicleId());
-
-        return applyVehicleMultiplyingFactorOnTransportCost(vehicle, transportCost);
+        return transportCost;
     }
 
     private double calculateRoadCost(TransportData transportData) {

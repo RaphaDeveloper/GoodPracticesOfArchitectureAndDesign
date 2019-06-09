@@ -94,7 +94,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck() {
+    public void should_calculate_the_cost_without_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_box_truck() {
         int boxTruckId = 1;
         double multiplyingFactor = 1d;
         double transportCostExpected = 116d * multiplyingFactor;
@@ -110,7 +110,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck() {
+    public void should_calculate_the_cost_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_bucket_truck() {
         int bucketTruckId = 2;
         double multiplyingFactor = 1.05d;
         double transportCostExpected = 116d * multiplyingFactor;
@@ -126,7 +126,7 @@ public class TransportCostCalculatorTest {
     }
 
     @Test
-    public void should_calculate_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck() {
+    public void should_calculate_the_cost_with_additional_cost_after_apply_multiplying_factor_when_the_vehicle_is_big_truck() {
         int bigTruckVehicle = 3;
         double multiplyingFactor = 1.12d;
         double transportCostExpected = 116d * multiplyingFactor;
@@ -140,6 +140,43 @@ public class TransportCostCalculatorTest {
 
         assertThat(transportCost, is(transportCostExpected));
     }
+
+    @Test
+    public void should_calculate_the_cost_in_paved_road_with_weight_in_excess_applying_multiplying_factor_when_the_vehicle_is_bucket_truck() {
+        int bucketTruckVehicle = 2;
+        double multiplyingFactor = 1.05d;
+        double wightAdditionalCost = 6d;
+        double roadCost = 54d;
+        double transportCostExpected = (roadCost * multiplyingFactor) + wightAdditionalCost;
+
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(bucketTruckVehicle);
+        transportData.setWeightTon(8);
+        transportData.setDistanceInPavementRoad(100);
+
+        double transportCost = transportCostCalculator.calculate(transportData);
+
+        assertThat(transportCost, is(transportCostExpected));
+    }
+
+    @Test
+    public void should_calculate_the_cost_in_unpaved_road_with_weight_in_excess_applying_multiplying_factor_when_the_vehicle_is_big_truck() {
+        int bigTruckVehicle = 3;
+        double multiplyingFactor = 1.12d;
+        double wightAdditionalCost = 25.2d;
+        double roadCost = 111.6d;
+        double transportCostExpected = (roadCost * multiplyingFactor) + wightAdditionalCost;
+
+        TransportData transportData = new TransportData();
+        transportData.setVehicleId(bigTruckVehicle);
+        transportData.setWeightTon(12);
+        transportData.setDistanceInUnpavementRoad(180);
+
+        double transportCost = transportCostCalculator.calculate(transportData);
+
+        assertThat(transportCost, is(transportCostExpected));
+    }
+
 
     @Test(expected = InvalidDistanceException.class)
     public void should_not_be_possible_to_calculate_transport_cost_with_negative_distance_in_paved_road() {
