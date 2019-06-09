@@ -2,6 +2,7 @@ package observation.formatters;
 
 import invoice.Invoice;
 
+import java.text.NumberFormat;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,14 +21,14 @@ public class ObservationWithInvoiceValueFormatter implements ObservationFormatte
         String formattedInvoices = String.format("%s.", observationBuilder);
 
         if (invoices.size() > 1) {
-            formattedInvoices += String.format(" Total = %s.", getTotalValueOfInvoices(invoices));
+            formattedInvoices += String.format(" Total = %s.", formatValueToCurrency(getTotalValueOfInvoices(invoices)));
         }
 
         return formattedInvoices;
     }
 
     private void formatInvoice(Invoice invoice, boolean isTheLastInvoice) {
-        String formattedInvoice = String.format("%s cujo valor é %s", invoice.getNumber(), invoice.getValue());
+        String formattedInvoice = String.format("%s cujo valor é %s", invoice.getNumber(), formatValueToCurrency(invoice.getValue()));
 
         String separator = "";
 
@@ -54,5 +55,9 @@ public class ObservationWithInvoiceValueFormatter implements ObservationFormatte
         }
 
         return value;
+    }
+
+    public String formatValueToCurrency(double value) {
+        return NumberFormat.getCurrencyInstance().format(value);
     }
 }

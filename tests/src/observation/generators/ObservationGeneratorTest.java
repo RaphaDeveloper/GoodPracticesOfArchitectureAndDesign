@@ -62,6 +62,6 @@ public class ObservationGeneratorTest {
 
         String observation = generator.generateFromInvoiceNumbers(Arrays.asList(1, 2));
 
-        assertThat(observation, is("Fatura da nota fiscal de simples remessa: 1 cujo valor é R$ 10,00, 2 cujo valor é R$ 20,00. Total = R$ 30,00."));
+        assertThat(observation, is("Fatura das notas fiscais de simples remessa: 1 cujo valor é R$ 10,00 e 2 cujo valor é R$ 20,00. Total = R$ 30,00."));
     }
 }
