@@ -7,13 +7,13 @@ public class ObservationGenerator {
 
     //Textos pr�-definidos
     static final String umoNota = "Fatura da nota fiscal de simples remessa: ";
+
     //Identificador da entidade
-    String texto;
+    //String texto;
 
     //Gera observa��es, com texto pre-definido, incluindo os n�meros, das notas fiscais, recebidos no par�metro
     public String geraObservacao(List lista)
     {
-        texto = "";
         if (lista != null && !lista.isEmpty())
         {
             return retornaCodigos(lista) + ".";
@@ -23,10 +23,12 @@ public class ObservationGenerator {
 
     //Cria observa��o
     private String retornaCodigos(List lista) {
+        String observation = "";
+
         if (lista.size() >= 2) {
-            texto = "Fatura das notas fiscais de simples remessa: ";
+            observation = "Fatura das notas fiscais de simples remessa: ";
         } else {
-            texto = umoNota;
+            observation = umoNota;
         }
 
         //Acha separador
@@ -44,6 +46,6 @@ public class ObservationGenerator {
             cod.append(s + c);
         }
 
-        return texto + cod;
+        return observation + cod;
     }
 }
