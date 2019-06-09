@@ -17,10 +17,11 @@ public class SimpleObservationFormatter implements ObservationFormatter {
             formatInvoice(invoiceIterator.next(), !invoiceIterator.hasNext());
         }
 
-        return observationBuilder.toString();
+        return String.format("%s.", observationBuilder);
     }
 
     private void formatInvoice(Invoice invoice, boolean isTheLastInvoice) {
+        String formattedInvoice = invoice.getNumber().toString();
         String separator = "";
 
         if (someInvoiceHasAlreadyBeenFormatted()) {
@@ -31,7 +32,7 @@ public class SimpleObservationFormatter implements ObservationFormatter {
             }
         }
 
-        observationBuilder.append(separator + invoice.getNumber().toString());
+        observationBuilder.append(separator + formattedInvoice);
     }
 
     private boolean someInvoiceHasAlreadyBeenFormatted() {

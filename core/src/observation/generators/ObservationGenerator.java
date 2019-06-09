@@ -14,8 +14,8 @@ public class ObservationGenerator {
         this.formatter = formatter;
     }
 
-    private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s.";
-    private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s.";
+    private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s";
+    private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s";
 
     public String generateFromInvoiceNumbers(List<Integer> invoiceNumbers) {
 

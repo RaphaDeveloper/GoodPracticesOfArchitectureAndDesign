@@ -12,4 +12,8 @@ public class Invoice {
     public Integer getNumber() {
         return number;
     }
+
+    public double getValue() {
+        return value;
+    }
 }
