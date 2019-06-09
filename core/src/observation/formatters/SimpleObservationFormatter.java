@@ -1,5 +1,7 @@
 package observation.formatters;
 
+import invoice.Invoice;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -8,17 +10,17 @@ public class SimpleObservationFormatter implements ObservationFormatter {
     private StringBuilder observationBuilder;
 
     @Override
-    public String formatInvoices(List<Integer> invoiceNumbers) {
+    public String formatInvoices(List<Invoice> invoice) {
         observationBuilder = new StringBuilder();
 
-        for (Iterator<Integer> invoiceNumbersIterator = invoiceNumbers.iterator(); invoiceNumbersIterator.hasNext();) {
-            formatInvoice(invoiceNumbersIterator.next(), !invoiceNumbersIterator.hasNext());
+        for (Iterator<Invoice> invoiceIterator = invoice.iterator(); invoiceIterator.hasNext();) {
+            formatInvoice(invoiceIterator.next(), !invoiceIterator.hasNext());
         }
 
         return observationBuilder.toString();
     }
 
-    private void formatInvoice(Integer invoiceNumber, boolean isTheLastInvoice) {
+    private void formatInvoice(Invoice invoice, boolean isTheLastInvoice) {
         String separator = "";
 
         if (someInvoiceHasAlreadyBeenFormatted()) {
@@ -29,7 +31,7 @@ public class SimpleObservationFormatter implements ObservationFormatter {
             }
         }
 
-        observationBuilder.append(separator + invoiceNumber.toString());
+        observationBuilder.append(separator + invoice.getNumber().toString());
     }
 
     private boolean someInvoiceHasAlreadyBeenFormatted() {
