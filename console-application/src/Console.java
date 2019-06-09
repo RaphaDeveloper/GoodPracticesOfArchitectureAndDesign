@@ -17,18 +17,18 @@ public class Console {
     public static void start(AppService appService) {
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            String cmd = ConsoleUtils.readString(scanner);
+        String cmd = "";
 
+        while (true) {
             if ("CALC".equalsIgnoreCase(cmd)) {
                 appService.calculateTransportCost(scanner);
-            } else if ("INFO".equalsIgnoreCase(cmd)) {
-                appService.info();
             } else if ("EXIT".equalsIgnoreCase(cmd)) {
                 break;
-            } else {
-                appService.info();
             }
+
+            appService.info();
+
+            cmd = ConsoleUtils.readString(scanner);
         }
 
     }
