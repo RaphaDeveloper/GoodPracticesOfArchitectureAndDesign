@@ -4,12 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ObservationGenerator {
-
-    //Textos pr�-definidos
-    static final String umoNota = "Fatura da nota fiscal de simples remessa: ";
-
-    //Identificador da entidade
-    //String texto;
+    private final String INITIAL_TEXT_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: ";
+    private final String INITIAL_TEXT_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: ";
 
     //Gera observa��es, com texto pre-definido, incluindo os n�meros, das notas fiscais, recebidos no par�metro
     public String geraObservacao(List lista)
@@ -26,9 +22,9 @@ public class ObservationGenerator {
         String observation = "";
 
         if (lista.size() >= 2) {
-            observation = "Fatura das notas fiscais de simples remessa: ";
+            observation = INITIAL_TEXT_FOR_MULTIPLE_INVOICES;
         } else {
-            observation = umoNota;
+            observation = INITIAL_TEXT_FOR_ONE_INVOICE;
         }
 
         //Acha separador
