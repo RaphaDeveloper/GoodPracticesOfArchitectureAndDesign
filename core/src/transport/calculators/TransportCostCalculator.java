@@ -22,7 +22,6 @@ public class TransportCostCalculator {
         double transportCost = calculateRoadCost(transportData);
 
         Vehicle vehicle = getVehicleById(transportData.getVehicleId());
-
         transportCost = applyVehicleMultiplyingFactorOnTransportCost(vehicle, transportCost);
 
         if (weightIsInExcess(transportData.getWeightTon())) {
