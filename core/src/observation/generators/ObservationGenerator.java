@@ -1,9 +1,11 @@
 package observation.generators;
 
-import java.util.Iterator;
+import observation.formatters.InvoiceNumberFormatter;
+
 import java.util.List;
 
 public class ObservationGenerator {
+
     private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s.";
     private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s.";
 
@@ -11,9 +13,7 @@ public class ObservationGenerator {
 
         if (isThereAnyInvoiceNumbers(invoiceNumbers))
         {
-            //String templateText = getTextTemplateBasedOnAmountOfInvoiceNumbers(invoiceNumbers.size());
-
-            return retornaCodigos(invoiceNumbers);
+            return generateObservation(invoiceNumbers);
         }
 
         return "";
@@ -21,6 +21,14 @@ public class ObservationGenerator {
 
     private boolean isThereAnyInvoiceNumbers(List<Integer> invoiceNumbers) {
         return invoiceNumbers != null && !invoiceNumbers.isEmpty();
+    }
+
+    private String generateObservation(List<Integer> invoiceNumbers) {
+        String textTemplate = getTextTemplateBasedOnAmountOfInvoiceNumbers(invoiceNumbers.size());
+
+        String formattedInvoiceNumbers = formatInvoiceNumbers(invoiceNumbers);
+
+        return String.format(textTemplate, formattedInvoiceNumbers);
     }
 
     private String getTextTemplateBasedOnAmountOfInvoiceNumbers(int amountOfInvoiceNumbers) {
@@ -31,25 +39,9 @@ public class ObservationGenerator {
         return TEXT_TEMPLATE_FOR_ONE_INVOICE;
     }
 
-    //Cria observa��o
-    private String retornaCodigos(List lista) {
-        String observation = getTextTemplateBasedOnAmountOfInvoiceNumbers(lista.size());
+    private String formatInvoiceNumbers(List<Integer> invoiceNumbers) {
+        InvoiceNumberFormatter formatter = new InvoiceNumberFormatter();
 
-        //Acha separador
-        StringBuilder cod = new StringBuilder();
-        for (Iterator<Integer> iterator = lista.iterator(); iterator.hasNext();) {
-            Integer c = iterator.next();
-            String s = "";
-            if( cod.toString() == null || cod.toString().length() <= 0 )
-                s =  "";
-            else if( iterator.hasNext() )
-                s =  ", ";
-            else
-                s =  " e ";
-
-            cod.append(s + c);
-        }
-
-        return String.format(observation, cod);
+        return formatter.formatInvoiceNumbers(invoiceNumbers);
     }
 }
