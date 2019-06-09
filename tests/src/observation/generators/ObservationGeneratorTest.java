@@ -1,6 +1,5 @@
 package observation.generators;
 
-import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
@@ -19,7 +18,16 @@ public class ObservationGeneratorTest {
     }
 
     @Test
-    public void should_be_possible_to_generate_observation_to_one_invoice() {
+    public void should_return_empty_text_for_invoice_numbers_provided_equals_to_null() {
+        ObservationGenerator generator = new ObservationGenerator();
+
+        String observation = generator.geraObservacao(null);
+
+        assertThat(observation, is(""));
+    }
+
+    @Test
+    public void should_be_possible_to_generate_observation_for_one_invoice_number_provided() {
         ObservationGenerator generator = new ObservationGenerator();
 
         String observation = generator.geraObservacao(Arrays.asList(1));
@@ -28,7 +36,7 @@ public class ObservationGeneratorTest {
     }
 
     @Test
-    public void should_be_possible_to_generate_observation_to_more_than_one_invoice() {
+    public void should_be_possible_to_generate_observation_to_more_than_one_invoice_number_provided() {
         ObservationGenerator generator = new ObservationGenerator();
 
         String observation = generator.geraObservacao(Arrays.asList(1,2,3,4,5));

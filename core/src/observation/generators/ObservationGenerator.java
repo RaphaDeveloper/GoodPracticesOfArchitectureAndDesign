@@ -14,7 +14,7 @@ public class ObservationGenerator {
     public String geraObservacao(List lista)
     {
         texto = "";
-        if (!lista.isEmpty())
+        if (lista != null && !lista.isEmpty())
         {
             return retornaCodigos(lista) + ".";
         }
