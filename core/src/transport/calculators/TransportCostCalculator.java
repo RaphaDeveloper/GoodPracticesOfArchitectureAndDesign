@@ -44,18 +44,6 @@ public class TransportCostCalculator {
         return transportData.getDistanceInUnpavementRoad() * UNPAVED_ROAD_COST_BY_KILOMETER;
     }
 
-    private boolean weightIsInExcess(int weight) {
-        return weight > LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
-    }
-
-    private double calculateCostOfExcessWeight(TransportData transportData) {
-        return COST_OF_EXCESS_WEIGHT * getExcessWeight(transportData.getWeightTon()) * transportData.getTotalDistance();
-    }
-
-    private double getExcessWeight(int weight) {
-        return weight - LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
-    }
-
     private Vehicle getVehicleById(int vehicleId) {
         Vehicle vehicle = vehicleRepository.getById(vehicleId);
 
@@ -69,4 +57,18 @@ public class TransportCostCalculator {
     private double applyVehicleMultiplyingFactorOnTransportCost(Vehicle vehicle, double transportCost) {
         return transportCost * vehicle.getMultiplyingFactor();
     }
+
+    private boolean weightIsInExcess(int weight) {
+        return weight > LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
+    }
+
+    private double calculateCostOfExcessWeight(TransportData transportData) {
+        return COST_OF_EXCESS_WEIGHT * getExcessWeight(transportData.getWeightTon()) * transportData.getTotalDistance();
+    }
+
+    private double getExcessWeight(int weight) {
+        return weight - LIMIT_OF_WEIGHT_WITHOUT_ADDITIONAL_COST;
+    }
+
+
 }
