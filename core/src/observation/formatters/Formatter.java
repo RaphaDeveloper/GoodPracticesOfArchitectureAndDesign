@@ -4,7 +4,7 @@ import invoice.Invoice;
 
 import java.util.List;
 
-public interface ObservationFormatter {
+public interface Formatter {
 
     String formatInvoices(List<Invoice> invoices);
 }

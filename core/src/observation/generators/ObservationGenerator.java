@@ -1,17 +1,19 @@
 package observation.generators;
 
 import invoice.Invoice;
-import observation.formatters.ObservationFormatter;
-import java.util.ArrayList;
+import invoice.InvoiceRepository;
+import observation.formatters.Formatter;
 import java.util.List;
 
 public class ObservationGenerator {
 
-    private ObservationFormatter formatter;
+    private Formatter formatter;
+    private InvoiceRepository invoiceRepository;
 
-    public ObservationGenerator(ObservationFormatter formatter) {
+    public ObservationGenerator(Formatter formatter, InvoiceRepository invoiceRepository) {
 
         this.formatter = formatter;
+        this.invoiceRepository = invoiceRepository;
     }
 
     private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s";
@@ -33,17 +35,7 @@ public class ObservationGenerator {
     }
 
     private List<Invoice> getInvoicesByNumbers(List<Integer> invoiceNumbers) {
-        double value = 0;
-
-        List<Invoice> invoices = new ArrayList<>();
-
-        for (int invoiceNumber : invoiceNumbers) {
-            value += 10;
-
-            invoices.add(new Invoice(invoiceNumber, value));
-        }
-
-        return invoices;
+        return invoiceRepository.getByNumbers(invoiceNumbers);
     }
 
     private String generateObservation(List<Invoice> invoices) {
