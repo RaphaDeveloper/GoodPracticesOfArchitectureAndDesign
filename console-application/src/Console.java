@@ -1,15 +1,15 @@
 import inject.DependencyInjectionFacade;
-import observation.generators.ObservationGeneratorFactory;
+import observation.generators.IObservationGeneratorFactory;
 import services.ObservationAppService;
 import services.TransportAppService;
-import transport.calculators.TransportCostCalculator;
+import transport.calculators.ITransportCostCalculator;
 import utils.ConsoleUtils;
 import java.util.Scanner;
 
 public class Console {
     public static void main(String[] args) {
-        TransportCostCalculator transportCostCalculator = DependencyInjectionFacade.getInstanceOf(TransportCostCalculator.class);
-        ObservationGeneratorFactory observationGeneratorFactory = DependencyInjectionFacade.getInstanceOf(ObservationGeneratorFactory.class);
+        ITransportCostCalculator transportCostCalculator = DependencyInjectionFacade.getInstanceOf(ITransportCostCalculator.class);
+        IObservationGeneratorFactory observationGeneratorFactory = DependencyInjectionFacade.getInstanceOf(IObservationGeneratorFactory.class);
 
         TransportAppService transportAppService = new TransportAppService(transportCostCalculator);
         ObservationAppService observationAppService = new ObservationAppService(observationGeneratorFactory);

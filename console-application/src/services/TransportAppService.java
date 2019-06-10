@@ -1,16 +1,16 @@
 package services;
 
 import currency.CurrencyFormatter;
-import transport.calculators.TransportCostCalculator;
+import transport.calculators.ITransportCostCalculator;
 import transport.TransportData;
 import utils.*;
 
 import java.util.Scanner;
 
 public class TransportAppService {
-    private TransportCostCalculator transportCostCalculator;
+    private ITransportCostCalculator transportCostCalculator;
 
-    public TransportAppService(TransportCostCalculator transportCostCalculator) {
+    public TransportAppService(ITransportCostCalculator transportCostCalculator) {
         this.transportCostCalculator = transportCostCalculator;
     }
 

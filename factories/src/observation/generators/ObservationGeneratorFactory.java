@@ -2,11 +2,11 @@ package observation.generators;
 
 import invoice.InvoiceRepository;
 
-public class ObservationGeneratorFactoryImpl implements ObservationGeneratorFactory {
+public class ObservationGeneratorFactory implements IObservationGeneratorFactory {
 
     private InvoiceRepository invoiceRepository;
 
-    public ObservationGeneratorFactoryImpl(InvoiceRepository invoiceRepository) {
+    public ObservationGeneratorFactory(InvoiceRepository invoiceRepository) {
 
         this.invoiceRepository = invoiceRepository;
     }

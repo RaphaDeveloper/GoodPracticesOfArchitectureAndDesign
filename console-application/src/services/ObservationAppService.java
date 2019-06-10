@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ObservationAppService {
-    private ObservationGeneratorFactory observationGeneratorFactory;
+    private IObservationGeneratorFactory observationGeneratorFactory;
 
-    public ObservationAppService(ObservationGeneratorFactory observationGeneratorFactory) {
+    public ObservationAppService(IObservationGeneratorFactory observationGeneratorFactory) {
         this.observationGeneratorFactory = observationGeneratorFactory;
     }
 

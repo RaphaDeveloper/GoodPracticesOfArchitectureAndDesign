@@ -1,6 +1,6 @@
 package observation.generators;
 
-public interface ObservationGeneratorFactory {
+public interface IObservationGeneratorFactory {
 
     ObservationGenerator createObservationGenerator(ObservationGeneratorType type);
 }

@@ -1,8 +1,8 @@
 package module;
 
 import com.google.inject.AbstractModule;
+import transport.calculators.ITransportCostCalculator;
 import transport.calculators.TransportCostCalculator;
-import transport.calculators.TransportCostCalculatorImpl;
 import invoice.*;
 import observation.generators.*;
 import transport.vehicle.*;
@@ -19,8 +19,8 @@ public class ConcreteModule extends AbstractModule {
     private void configureBindsToConstructors() {
         try {
 
-            bind(TransportCostCalculator.class).toConstructor(TransportCostCalculatorImpl.class.getConstructor(VehicleRepository.class));
-            bind(ObservationGeneratorFactory.class).toConstructor(ObservationGeneratorFactoryImpl.class.getConstructor(InvoiceRepository.class));
+            bind(ITransportCostCalculator.class).toConstructor(TransportCostCalculator.class.getConstructor(VehicleRepository.class));
+            bind(IObservationGeneratorFactory.class).toConstructor(ObservationGeneratorFactory.class.getConstructor(InvoiceRepository.class));
 
         } catch (NoSuchMethodException e) {
             addError(e);
