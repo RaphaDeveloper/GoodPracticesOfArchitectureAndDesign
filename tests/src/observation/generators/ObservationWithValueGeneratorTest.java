@@ -1,7 +1,6 @@
 package observation.generators;
 
 import invoice.InvoiceRepository;
-import observation.formatters.*;
 import observation.invoice.InvoiceRepositoryStub;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,16 +9,15 @@ import java.util.Arrays;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class WithFormatterWithInvoiceValueTest {
+public class ObservationWithValueGeneratorTest {
 
-    private ObservationGenerator generator;
+    private ObservationWithValueGenerator generator;
 
     @Before
     public void setup() {
-        Formatter formatter = new FormatterWithInvoiceValue();
         InvoiceRepository invoiceRepository = new InvoiceRepositoryStub();
 
-        generator = new ObservationGenerator(formatter, invoiceRepository);
+        generator = new ObservationWithValueGenerator(invoiceRepository);
     }
 
     @Test
