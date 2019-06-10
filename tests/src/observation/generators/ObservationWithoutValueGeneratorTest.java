@@ -20,14 +20,14 @@ public class ObservationWithoutValueGeneratorTest {
 
     @Test
     public void should_return_empty_text_for_no_invoice_number_provided() {
-        String observation = generator.generateFromInvoiceNumbers(Arrays.asList());
+        String observation = generator.generateFromInvoices(Arrays.asList());
 
         assertThat(observation, is(""));
     }
 
     @Test
     public void should_return_empty_text_for_invoice_numbers_provided_equals_to_null() {
-        String observation = generator.generateFromInvoiceNumbers(null);
+        String observation = generator.generateFromInvoices(null);
 
         assertThat(observation, is(""));
     }
@@ -36,7 +36,7 @@ public class ObservationWithoutValueGeneratorTest {
     public void should_be_possible_to_generate_observation_for_one_invoice_number_provided() {
         Invoice invoice = new Invoice(1, 0d);
 
-        String observation = generator.generateFromInvoiceNumbers(Arrays.asList(invoice));
+        String observation = generator.generateFromInvoices(Arrays.asList(invoice));
 
         assertThat(observation, is("Fatura da nota fiscal de simples remessa: 1."));
     }
@@ -51,7 +51,7 @@ public class ObservationWithoutValueGeneratorTest {
 
         List<Invoice> invoices = Arrays.asList(invoice1, invoice2, invoice3, invoice4, invoice5);
 
-        String observation = generator.generateFromInvoiceNumbers(invoices);
+        String observation = generator.generateFromInvoices(invoices);
 
         assertThat(observation, is("Fatura das notas fiscais de simples remessa: 1, 2, 3, 4 e 5."));
     }

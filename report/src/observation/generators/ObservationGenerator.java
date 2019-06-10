@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ObservationGenerator {
 
-    String generateFromInvoiceNumbers(List<Invoice> invoices);
+    String generateFromInvoices(List<Invoice> invoices);
 }

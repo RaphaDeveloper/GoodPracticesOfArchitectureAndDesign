@@ -33,7 +33,7 @@ public class ObservationAppService {
 
             List<Invoice> invoices = invoiceRepository.getByNumbers(invoiceNumbers);
 
-            String observation = observationGenerator.generateFromInvoiceNumbers(invoices);
+            String observation = observationGenerator.generateFromInvoices(invoices);
 
             System.out.println("\n" + observation + "\n");
         } catch(RuntimeException exception) {

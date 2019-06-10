@@ -10,29 +10,29 @@ public abstract class ObservationGeneratorBase implements ObservationGenerator {
     private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s";
 
     @Override
-    public String generateFromInvoiceNumbers(List<Invoice> invoices) {
+    public String generateFromInvoices(List<Invoice> invoices) {
 
-        if (isThereAnyInvoiceNumbers(invoices)) {
+        if (isThereAnyInvoice(invoices)) {
             return generateObservation(invoices);
         }
 
         return "";
     }
 
-    private boolean isThereAnyInvoiceNumbers(List<Invoice> invoices) {
+    private boolean isThereAnyInvoice(List<Invoice> invoices) {
         return invoices != null && !invoices.isEmpty();
     }
 
     protected String generateObservation(List<Invoice> invoices) {
 
-        String textTemplate = getTextTemplateBasedOnAmountOfInvoiceNumbers(invoices.size());
+        String textTemplate = getTextTemplateBasedOnAmountOfInvoice(invoices.size());
 
         String textOfInvoices = getFormattedTextOfInvoices(invoices);
 
         return String.format(textTemplate, textOfInvoices);
     }
 
-    private String getTextTemplateBasedOnAmountOfInvoiceNumbers(int amountOfInvoices) {
+    private String getTextTemplateBasedOnAmountOfInvoice(int amountOfInvoices) {
         if (amountOfInvoices > 1) {
             return TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES;
         }
