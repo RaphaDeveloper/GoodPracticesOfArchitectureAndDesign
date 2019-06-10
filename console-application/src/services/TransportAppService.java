@@ -1,5 +1,6 @@
 package services;
 
+import currency.CurrencyFormatter;
 import transport.calculators.TransportCostCalculator;
 import transport.TransportData;
 import utils.*;
@@ -52,7 +53,7 @@ public class TransportAppService {
     }
 
     private void printTheTransportCost(double transportCost) {
-        String formattedTransportCost = CurrencyUtils.formatValueToCurrency(transportCost);
+        String formattedTransportCost = CurrencyFormatter.format(transportCost);
 
         System.out.println("\nThe cost of the transport is " + formattedTransportCost + "\n");
     }

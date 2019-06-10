@@ -1,7 +1,8 @@
 package observation.generators;
 
+import currency.CurrencyFormatter;
 import invoice.*;
-import java.text.NumberFormat;
+
 import java.util.List;
 
 public class ObservationWithValueGenerator extends ObservationGeneratorBase {
@@ -12,7 +13,7 @@ public class ObservationWithValueGenerator extends ObservationGeneratorBase {
 
     @Override
     protected String getTextOfInvoice(Invoice invoice) {
-        return String.format("%s cujo valor é %s", invoice.getNumber(), formatValueToCurrency(invoice.getValue()));
+        return String.format("%s cujo valor é %s", invoice.getNumber(), CurrencyFormatter.format(invoice.getValue()));
     }
 
     @Override
@@ -34,7 +35,7 @@ public class ObservationWithValueGenerator extends ObservationGeneratorBase {
     private String getTheTotalValueTextOfInvoices(List<Invoice> invoices) {
         double totalValue = getTheTotalValueOfInvoices(invoices);
 
-        return String.format(" Total = %s.", formatValueToCurrency(totalValue));
+        return String.format(" Total = %s.", CurrencyFormatter.format(totalValue));
     }
 
     private double getTheTotalValueOfInvoices(List<Invoice> invoices) {
@@ -45,9 +46,5 @@ public class ObservationWithValueGenerator extends ObservationGeneratorBase {
         }
 
         return value;
-    }
-
-    private String formatValueToCurrency(double value) {
-        return NumberFormat.getCurrencyInstance().format(value);
     }
 }

@@ -1,10 +1,10 @@
-package utils;
+package currency;
 
 import java.text.NumberFormat;
 
-public class CurrencyUtils {
+public class CurrencyFormatter {
 
-    public static String formatValueToCurrency(double value) {
+    public static String format(double value) {
         return NumberFormat.getCurrencyInstance().format(value);
     }
 }
