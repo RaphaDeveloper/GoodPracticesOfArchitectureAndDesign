@@ -7,10 +7,6 @@ import java.util.List;
 
 public class ObservationWithValueGenerator extends ObservationGeneratorBase {
 
-    public ObservationWithValueGenerator(InvoiceRepository invoiceRepository) {
-        super(invoiceRepository);
-    }
-
     @Override
     protected String getTextOfInvoice(Invoice invoice) {
         return String.format("%s cujo valor é %s", invoice.getNumber(), CurrencyFormatter.format(invoice.getValue()));

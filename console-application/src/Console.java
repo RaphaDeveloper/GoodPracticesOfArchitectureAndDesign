@@ -1,4 +1,5 @@
 import inject.DependencyInjectionFacade;
+import invoice.InvoiceRepository;
 import observation.generators.IObservationGeneratorFactory;
 import services.ObservationAppService;
 import services.TransportAppService;
@@ -10,9 +11,10 @@ public class Console {
     public static void main(String[] args) {
         ITransportCostCalculator transportCostCalculator = DependencyInjectionFacade.getInstanceOf(ITransportCostCalculator.class);
         IObservationGeneratorFactory observationGeneratorFactory = DependencyInjectionFacade.getInstanceOf(IObservationGeneratorFactory.class);
+        InvoiceRepository invoiceRepository = DependencyInjectionFacade.getInstanceOf(InvoiceRepository.class);
 
         TransportAppService transportAppService = new TransportAppService(transportCostCalculator);
-        ObservationAppService observationAppService = new ObservationAppService(observationGeneratorFactory);
+        ObservationAppService observationAppService = new ObservationAppService(invoiceRepository, observationGeneratorFactory);
 
 
         start(transportAppService, observationAppService);

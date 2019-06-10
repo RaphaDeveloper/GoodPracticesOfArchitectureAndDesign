@@ -1,5 +1,7 @@
 package services;
 
+import invoice.Invoice;
+import invoice.InvoiceRepository;
 import observation.generators.*;
 import utils.ConsoleUtils;
 import java.util.ArrayList;
@@ -8,8 +10,10 @@ import java.util.Scanner;
 
 public class ObservationAppService {
     private IObservationGeneratorFactory observationGeneratorFactory;
+    private InvoiceRepository invoiceRepository;
 
-    public ObservationAppService(IObservationGeneratorFactory observationGeneratorFactory) {
+    public ObservationAppService(InvoiceRepository invoiceRepository, IObservationGeneratorFactory observationGeneratorFactory) {
+        this.invoiceRepository = invoiceRepository;
         this.observationGeneratorFactory = observationGeneratorFactory;
     }
 
@@ -27,7 +31,9 @@ public class ObservationAppService {
         try {
             List<Integer> invoiceNumbers = getInvoiceNumbersFromUserInput(scanner);
 
-            String observation = observationGenerator.generateFromInvoiceNumbers(invoiceNumbers);
+            List<Invoice> invoices = invoiceRepository.getByNumbers(invoiceNumbers);
+
+            String observation = observationGenerator.generateFromInvoiceNumbers(invoices);
 
             System.out.println("\n" + observation + "\n");
         } catch(RuntimeException exception) {

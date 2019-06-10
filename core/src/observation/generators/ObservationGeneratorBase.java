@@ -9,31 +9,18 @@ public abstract class ObservationGeneratorBase implements ObservationGenerator {
     private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s";
     private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s";
 
-    private InvoiceRepository invoiceRepository;
-
-    public ObservationGeneratorBase(InvoiceRepository invoiceRepository) {
-
-        this.invoiceRepository = invoiceRepository;
-    }
-
     @Override
-    public String generateFromInvoiceNumbers(List<Integer> invoiceNumbers) {
+    public String generateFromInvoiceNumbers(List<Invoice> invoices) {
 
-        if (isThereAnyInvoiceNumbers(invoiceNumbers)) {
-            List<Invoice> invoices = getInvoicesByNumbers(invoiceNumbers);
-
+        if (isThereAnyInvoiceNumbers(invoices)) {
             return generateObservation(invoices);
         }
 
         return "";
     }
 
-    private boolean isThereAnyInvoiceNumbers(List<Integer> invoiceNumbers) {
-        return invoiceNumbers != null && !invoiceNumbers.isEmpty();
-    }
-
-    private List<Invoice> getInvoicesByNumbers(List<Integer> invoiceNumbers) {
-        return invoiceRepository.getByNumbers(invoiceNumbers);
+    private boolean isThereAnyInvoiceNumbers(List<Invoice> invoices) {
+        return invoices != null && !invoices.isEmpty();
     }
 
     protected String generateObservation(List<Invoice> invoices) {
