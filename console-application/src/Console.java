@@ -1,6 +1,7 @@
 import inject.DependencyInjectionFacade;
 import observation.generators.ObservationGeneratorFactory;
-import services.AppService;
+import services.ObservationAppService;
+import services.TransportAppService;
 import transport.calculators.TransportCostCalculator;
 import utils.ConsoleUtils;
 import java.util.Scanner;
@@ -10,28 +11,30 @@ public class Console {
         TransportCostCalculator transportCostCalculator = DependencyInjectionFacade.getInstanceOf(TransportCostCalculator.class);
         ObservationGeneratorFactory observationGeneratorFactory = DependencyInjectionFacade.getInstanceOf(ObservationGeneratorFactory.class);
 
-        AppService appService = new AppService(transportCostCalculator, observationGeneratorFactory);
+        TransportAppService transportAppService = new TransportAppService(transportCostCalculator);
+        ObservationAppService observationAppService = new ObservationAppService(observationGeneratorFactory);
 
-        start(appService);
+
+        start(transportAppService, observationAppService);
     }
 
-    public static void start(AppService appService) {
+    public static void start(TransportAppService transportAppService, ObservationAppService observationAppService) {
         Scanner scanner = new Scanner(System.in);
 
         String cmd = "";
 
         while (true) {
             if ("CALC".equalsIgnoreCase(cmd)) {
-                appService.calculateTransportCost(scanner);
+                transportAppService.calculateTransportCost(scanner);
             } else if ("OBS1".equalsIgnoreCase(cmd)) {
-                appService.generateOldObservation(scanner);
+                observationAppService.generateOldObservation(scanner);
             } else if ("OBS2".equalsIgnoreCase(cmd)) {
-                appService.generateNewObservation(scanner);
+                observationAppService.generateNewObservation(scanner);
             } else if ("EXIT".equalsIgnoreCase(cmd)) {
                 break;
             }
 
-            appService.info();
+            ConsoleUtils.printMainMenu();
 
             cmd = ConsoleUtils.readString(scanner);
         }
