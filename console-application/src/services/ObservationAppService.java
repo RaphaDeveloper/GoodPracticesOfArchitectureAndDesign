@@ -42,7 +42,7 @@ public class ObservationAppService {
     }
 
     private List<Integer> getInvoiceNumbersFromUserInput(Scanner scanner) {
-        System.out.println("Provide the invoice numbers separated by comma:");
+        System.out.println("Provide the invoice numbers separated by comma ex.(1,2,3,4):");
 
         String userInput = ConsoleUtils.readString(scanner);
 

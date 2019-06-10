@@ -1,7 +1,7 @@
 package observation.generators;
 
 import currency.CurrencyFormatter;
-import invoice.*;
+import invoice.Invoice;
 
 import java.util.List;
 

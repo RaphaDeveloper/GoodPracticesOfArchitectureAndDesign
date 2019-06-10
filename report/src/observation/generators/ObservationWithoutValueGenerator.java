@@ -1,6 +1,6 @@
 package observation.generators;
 
-import invoice.*;
+import invoice.Invoice;
 
 public class ObservationWithoutValueGenerator extends ObservationGeneratorBase {
 

@@ -1,7 +1,7 @@
 package observation.generators;
 
 import invoice.Invoice;
-import invoice.InvoiceRepository;
+
 import java.util.Iterator;
 import java.util.List;
 

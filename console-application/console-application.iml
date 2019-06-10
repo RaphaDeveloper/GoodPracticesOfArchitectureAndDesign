@@ -10,5 +10,6 @@
     <orderEntry type="module" module-name="domain.core" />
     <orderEntry type="module" module-name="infra.google-guice-dependency-injection" />
     <orderEntry type="module" module-name="infra.utils" />
+    <orderEntry type="module" module-name="domain.report" />
   </component>
 </module>

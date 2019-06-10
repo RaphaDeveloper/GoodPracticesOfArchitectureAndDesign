@@ -20,5 +20,6 @@
     <orderEntry type="library" name="org.hamcrest:hamcrest-library:2.1" level="project" />
     <orderEntry type="module" module-name="domain.core" scope="TEST" />
     <orderEntry type="module" module-name="infra.google-guice-dependency-injection" scope="TEST" />
+    <orderEntry type="module" module-name="domain.report" scope="TEST" />
   </component>
 </module>

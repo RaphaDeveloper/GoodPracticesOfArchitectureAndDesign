@@ -7,10 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.google.inject:guice:4.2.2" level="project" />
     <orderEntry type="module" module-name="domain.core" />
-    <orderEntry type="module" module-name="infra.in-memory-repository" />
-    <orderEntry type="module" module-name="infra.factories" />
-    <orderEntry type="module" module-name="domain.report" />
+    <orderEntry type="module" module-name="infra.utils" />
   </component>
 </module>
