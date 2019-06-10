@@ -1,6 +1,6 @@
 package transport.calculators;
 
-import DependencyInjectionFacade;
+import inject.DependencyInjectionFacade;
 import org.junit.Before;
 import org.junit.Test;
 import transport.TransportData;

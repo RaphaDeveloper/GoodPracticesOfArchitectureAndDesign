@@ -1,3 +1,4 @@
+import inject.DependencyInjectionFacade;
 import observation.generators.ObservationGeneratorFactory;
 import services.AppService;
 import transport.calculators.TransportCostCalculator;

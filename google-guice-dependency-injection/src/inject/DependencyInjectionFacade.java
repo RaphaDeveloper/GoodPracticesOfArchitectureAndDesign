@@ -1,3 +1,5 @@
+package inject;
+
 import com.google.inject.*;
 import module.ConcreteModule;
 
