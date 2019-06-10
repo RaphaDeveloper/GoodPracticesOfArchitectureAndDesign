@@ -24,11 +24,15 @@ public class ObservationAppService {
     private void generateObservation(Scanner scanner, ObservationGeneratorType observationGeneratorType) {
         ObservationGenerator observationGenerator = observationGeneratorFactory.createObservationGenerator(observationGeneratorType);
 
-        List<Integer> invoiceNumbers = getInvoiceNumbersFromUserInput(scanner);
+        try {
+            List<Integer> invoiceNumbers = getInvoiceNumbersFromUserInput(scanner);
 
-        String observation = observationGenerator.generateFromInvoiceNumbers(invoiceNumbers);
+            String observation = observationGenerator.generateFromInvoiceNumbers(invoiceNumbers);
 
-        System.out.println("\n" + observation + "\n");
+            System.out.println("\n" + observation + "\n");
+        } catch(RuntimeException exception) {
+            System.out.println("\nThe input data is invalid.\n");
+        }
     }
 
     private List<Integer> getInvoiceNumbersFromUserInput(Scanner scanner) {

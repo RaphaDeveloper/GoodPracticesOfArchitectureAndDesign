@@ -15,9 +15,13 @@ public class TransportAppService {
     }
 
     public void calculateTransportCost(Scanner scanner) {
-        TransportData transportData = createTransportDataFromUserInput(scanner);
+        try {
+            TransportData transportData = createTransportDataFromUserInput(scanner);
 
-        tryToCalculateTransportCost(transportData);
+            tryToCalculateTransportCost(transportData);
+        } catch(RuntimeException exception) {
+            System.out.println("\nThe input data is invalid.\n");
+        }
     }
 
     private TransportData createTransportDataFromUserInput(Scanner scanner) {
