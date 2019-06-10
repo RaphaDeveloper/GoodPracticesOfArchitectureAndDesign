@@ -1,7 +1,6 @@
 package observation.generators;
 
-import invoice.Invoice;
-import invoice.InvoiceRepository;
+import invoice.*;
 import java.text.NumberFormat;
 import java.util.List;
 

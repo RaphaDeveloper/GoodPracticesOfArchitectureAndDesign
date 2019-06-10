@@ -1,7 +1,4 @@
-package facades;
-
-import com.google.inject.Guice;
-import com.google.inject.Injector;
+import com.google.inject.*;
 import module.ConcreteModule;
 
 public class DependencyInjectionFacade {

@@ -5,8 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/console-application/console-application.iml" filepath="$PROJECT_DIR$/console-application/console-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/domain.core.iml" filepath="$PROJECT_DIR$/core/domain.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/tests/domain.tests.iml" filepath="$PROJECT_DIR$/tests/domain.tests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/google-guice-dependency-injection/google-guice-dependency-injection.iml" filepath="$PROJECT_DIR$/google-guice-dependency-injection/google-guice-dependency-injection.iml" />
-      <module fileurl="file://$PROJECT_DIR$/in-memory-repository/in-memory-repository.iml" filepath="$PROJECT_DIR$/in-memory-repository/in-memory-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/factories/infra.factories.iml" filepath="$PROJECT_DIR$/factories/infra.factories.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-guice-dependency-injection/infra.google-guice-dependency-injection.iml" filepath="$PROJECT_DIR$/google-guice-dependency-injection/infra.google-guice-dependency-injection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/in-memory-repository/infra.in-memory-repository.iml" filepath="$PROJECT_DIR$/in-memory-repository/infra.in-memory-repository.iml" />
     </modules>
   </component>
 </project>
