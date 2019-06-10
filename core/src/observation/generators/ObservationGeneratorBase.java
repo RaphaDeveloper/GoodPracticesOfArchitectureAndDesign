@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public abstract class ObservationGeneratorBase implements ObservationGenerator {
+    private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s";
+    private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s";
 
     private InvoiceRepository invoiceRepository;
 
@@ -13,9 +15,6 @@ public abstract class ObservationGeneratorBase implements ObservationGenerator {
 
         this.invoiceRepository = invoiceRepository;
     }
-
-    private final String TEXT_TEMPLATE_FOR_ONE_INVOICE = "Fatura da nota fiscal de simples remessa: %s";
-    private final String TEXT_TEMPLATE_FOR_MULTIPLE_INVOICES = "Fatura das notas fiscais de simples remessa: %s";
 
     @Override
     public String generateFromInvoiceNumbers(List<Integer> invoiceNumbers) {

@@ -18,24 +18,26 @@ public class ObservationWithValueGenerator extends ObservationGeneratorBase {
     @Override
     protected String generateObservation(List<Invoice> invoices) {
 
-        String observantion = super.generateObservation(invoices);
+        String observation = super.generateObservation(invoices);
 
         if (isThereMoreThanOneInvoice(invoices)) {
-            observantion += getTheTextWithTotalValueOfInvoices(invoices);
+            observation += getTheTotalValueTextOfInvoices(invoices);
         }
 
-        return observantion;
+        return observation;
     }
 
     private boolean isThereMoreThanOneInvoice(List<Invoice> invoices) {
         return invoices.size() > 1;
     }
 
-    private String getTheTextWithTotalValueOfInvoices(List<Invoice> invoices) {
-        return String.format(" Total = %s.", formatValueToCurrency(getTotalValueOfInvoices(invoices)));
+    private String getTheTotalValueTextOfInvoices(List<Invoice> invoices) {
+        double totalValue = getTheTotalValueOfInvoices(invoices);
+
+        return String.format(" Total = %s.", formatValueToCurrency(totalValue));
     }
 
-    private double getTotalValueOfInvoices(List<Invoice> invoices) {
+    private double getTheTotalValueOfInvoices(List<Invoice> invoices) {
         double value = 0;
 
         for (Invoice invoice : invoices) {
