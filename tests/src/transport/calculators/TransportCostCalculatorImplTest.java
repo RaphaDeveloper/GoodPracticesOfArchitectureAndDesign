@@ -11,15 +11,15 @@ import transport.vehicle.VehicleRepository;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class TransportCostCalculatorTest {
+public class TransportCostCalculatorImplTest {
 
-    private TransportCostCalculator transportCostCalculator;
+    private TransportCostCalculatorImpl transportCostCalculator;
 
     @Before
     public void setup() {
         VehicleRepository vehicleRepository = DependencyInjectionFacade.getInstanceOf(VehicleRepository.class);
 
-        transportCostCalculator = new TransportCostCalculator(vehicleRepository);
+        transportCostCalculator = new TransportCostCalculatorImpl(vehicleRepository);
     }
 
     @Test
